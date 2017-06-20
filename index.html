@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- 如果安装了Google chrome frame则强制用GCF来渲染，否则IE用最高版本的IE内核来渲染 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<!-- 让viewport宽度=设备宽度=layoutviweport宽度 ，用于自适应布局-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<link rel="shortcut icon" href="images/-Logo.ico" type="image/x-icon">
+	<title>广医易班 | 给你不一般的广医体验-欢迎登录</title>
+	
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" type="text/css" href="css/ie8-and-down.css" />
+	<![endif]-->
+	<link rel="stylesheet" type="text/css" href="font/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/animation.css">
+
+
+	
+	
+</head>
+<body>
+	<!--[if lt IE 9]>
+		<div class="alert-danger" role="alert">
+			你的浏览器实在<strong>太太太太太太旧了</strong>，导致页面无法完美显示渲染。放学别走，升级完浏览器再说 → <a target="_blank" class="alert-danger-anchor" href="http://browsehappy.com">立即升级</a>
+		</div>
+	<![endif]-->
+	
+	<div class="container">
+		<header>
+			<div class="header">
+				<div class="connerL conner"><i class="icon-mianxingtubiaoshuqian-copy iconfont"></i></div>
+				<div class="main-header">
+					<div class="logo">
+						<img src="images/logo.png">
+					</div>
+					<div class="nav">
+						<ul class="navUl">
+							<li class="current">
+								<span>易学校</span>
+								<!-- <div class="dot"></div> -->
+							</li>
+							<li>
+								<span>易班级</span>
+								<!-- <div class="dot"></div> -->
+							</li>
+							<li>
+								<span>易社团</span>
+								<!-- <div class="dot"></div> -->
+							</li>
+							<li>
+								<span>易学习</span>
+								<!-- <div class="dot"></div> -->
+							</li>
+							<li>
+								<span>易工作</span>
+								<!-- <div class="dot"></div> -->
+							</li>
+							<li>
+								<span>易生活</span>
+								<!-- <div class="dot"></div> -->
+							</li>
+						</ul>
+						<div class="hearder-btn">
+							<!-- 登陆按钮 -->
+							<button class="loginBtn btn" id="loginBtn" >登录</button>
+							<!-- 登陆成功后的按钮 -->
+							<div class="userInfoBtn" >
+								<button type="button" class="loginBtn btn dropdown-toggle" data-toggle="dropdown">
+									我<span class="caret"></span>
+								</button>
+								<div class="dropdown-menu" role="menu" style="display: none;">
+									<ul>
+										<li class="dropdown-menu_item">
+											<span>我的主页</span>
+										</li>
+										<li class="dropdown-menu_item">
+											<span>修改密码</span>
+										</li>
+										<li class="dropdown-menu_item">
+											<span>退出</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="connerR conner"><i class="icon-mianxingtubiaoshuqian iconfont"></i></div>
+			</div>
+		</header>
+
+
+
+		<main>
+			<!-- 登录弹出框 -->
+			<div class="pop_LoginBox" style="display: none;">
+				<div class="closeBox">
+					<img src="images/close_popLoginBox.png">
+				</div>
+				<div class="LoginBox-title">
+					<h4>欢迎登录广医易班</h4>
+					<p>请使用广东医科大学数字化校园平台的账号密码登录</p>
+				</div>
+				<div class="LoginBox-form">
+					<div class="login-form-input login-form-input1">
+						<span><img src="images/login_user.jpg"></span><div class="login-form-input_line"></div><input type="text" name="" placeholder="学号/教师工号">
+					</div>
+					<div class="login-form-input login-form-input2">
+						<span><img src="images/login_pw.jpg"></span><div class="login-form-input_line"></div><input type="password" name="" placeholder="输入6-12位密码">
+					</div>
+					<button class="login-form-subBtn btn">登录</button>
+					<div class="login-form-aboutPW">
+						<label><div class="login-form-aboutPW_checked"><input type="checkbox" name="" ></div>记住密码</label>
+						<a href="#">忘记密码?</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- 黑色半透明遮罩 -->
+			<div style="position: fixed; top: 0px; left: 0px; bottom: 0px; right:0px; background: rgb(0, 0, 0) none repeat scroll 0% 0%; opacity: 0.3; z-index: 100; display: none;" id="mask"></div>
+			
+
+			
+
+
+
+
+			<!-- 主要内容 -->
+			<div class="content">
+				<!-- 易学校 -->
+				<section >
+					<div class="section ySchool">
+						<ul>
+							<li class="module centerFix">
+								<div class="module-icon">
+									<img width="100%" height="100%" alt="校级通知" src="images/ySchool-xjtz.png">
+								</div>
+								<div class="module-title">
+									校级通知
+								</div>
+							</li>
+							<li class="module">
+								<div class="module-icon">
+									<img width="100%" height="100%" alt="院级通知" src="images/ySchool-yjtz.png">
+								</div>
+								<div class="module-title">
+									院级通知
+								</div>
+							</li>
+							<li class="module">
+								<div class="module-icon">
+									<img width="100%" height="100%" alt="其他通知" src="images/ySchool-qttz.png">
+								</div>
+								<div class="module-title">
+									其他通知
+								</div>
+							</li>
+						</ul>
+					</div>
+				</section>
+
+
+				<!-- 易班级 -->
+				<section style="display: none;">
+					<div class="yClass section">
+						<ul>
+							<li class="module centerFix">
+								<div class="module-icon">
+									<img width="100%" height="100%" alt="班级动态" src="images/yClass-bjdt.png">
+								</div>
+								<div class="module-title">
+									班级动态
+								</div>
+							</li>
+							<li class="module">
+								<div class="module-icon">
+									<img width="100%" height="100%" alt="班务公开" src="images/yClass-bwgk.png">
+								</div>
+								<div class="module-title">
+									班务公开
+								</div>
+							</li>
+							<li class="module">
+								<div class="module-icon">
+									<img width="100%" height="100%" alt="课件下载" src="images/yClass-kjxz.png">
+								</div>
+								<div class="module-title">
+									课件下载
+								</div>
+							</li>
+							<li class="module centerFix">
+								<div class="module-icon">
+									<img width="100%" height="100%" alt="在线课堂" src="images/yClass-zxkt.png">
+								</div>
+								<div class="module-title">
+									在线课堂
+								</div>
+							</li>
+						</ul>
+					</div>
+				</section>
+
+
+				<!-- 易社团 -->
+				<section style="display: none;">
+					<div class="yClub section">
+						<ul>
+							<li class="module centerFix">
+								<div class="module-icon">
+									<img width="100%" height="100%" alt="社团一览" src="images/yClub-styl.png">
+								</div>
+								<div class="module-title">
+									社团一览
+								</div>
+							</li>
+							<li class="module">
+								<div class="module-icon">
+									<img width="100%" height="100%" alt="活动一览" src="images/yClub-hdyl.png">
+								</div>
+								<div class="module-title">
+									活动一览
+								</div>
+							</li>
+							<li class="module">
+								<div class="module-icon">
+									<img width="100%" height="100%" alt="活动申请" src="images/yClub-hdsq.png">
+								</div>
+								<div class="module-title">
+									活动申请
+								</div>
+							</li>
+						</ul>
+					</div>
+				</section>
+
+
+				<!-- 易学习 -->
+				<section style="display: none;">
+					<div class="yStudy section">
+						<ul>
+							<li class="module centerFix">
+								<div class="module-icon">
+									<img width="100%" height="100%" alt="综合测评系统" src="images/yStudy-zhcpxt.png">
+								</div>
+								<div class="module-title">
+									综合测评系统
+								</div>
+							</li>
+							<li class="module">
+								<div class="module-icon">
+									<img width="100%" height="100%" alt="选课系统" src="images/yStudy-xkxt.png">
+								</div>
+								<div class="module-title">
+									选课系统
+								</div>
+							</li>
+							<li class="module">
+								<div class="module-icon">
+									<img width="100%" height="100%" alt="课表查询" src="images/yStudy-kbcx.png">
+								</div>
+								<div class="module-title">
+									课表查询
+								</div>
+							</li>
+							<li class="module centerFix">
+								<div class="module-icon">
+									<img width="100%" height="100%" alt="学分查询" src="images/yStudy-xfcx.png">
+								</div>
+								<div class="module-title">
+									学分查询
+								</div>
+							</li>
+							<li class="module">
+								<div class="module-icon">
+									<img width="100%" height="100%" alt="成绩查询" src="images/yStudy-cjcx.png">
+								</div>
+								<div class="module-title">
+									成绩查询
+								</div>
+							</li>
+							<li class="module">
+								<div class="module-icon">
+									<img width="100%" height="100%" alt="点名查询" src="images/yStudy-dmcx.png">
+								</div>
+								<div class="module-title">
+									点名查询
+								</div>
+							</li>
+							<li class="module centerFix">
+								<div class="module-icon">
+									<img width="100%" height="100%" alt="统考报名" src="images/yStudy-tkbm.png">
+								</div>
+								<div class="module-title">
+									统考报名
+								</div>
+							</li>
+							<li class="module">
+								<div class="module-icon">
+									<img width="100%" height="100%" alt="补缓考申请" src="images/yStudy-bhksq.png">
+								</div>
+								<div class="module-title">
+									补缓考申请
+								</div>
+							</li>
+						</ul>
+					</div>
+				</section>
+
+
+				<!-- 易工作 -->
+				<section style="display: none;">
+					<div class="yWork section">
+						<ul>
+							<li class="module centerFix">
+								<div class="module-icon">
+									<img width="100%" height="100%" alt="实习分配系统" src="images/yWork-sxfpxt.png">
+								</div>
+								<div class="module-title">
+									实习分配系统
+								</div>
+							</li>
+						</ul>
+					</div>
+				</section>
+
+
+				<!-- 易生活 -->
+				<section style="display: none;">
+					<div class="yLife section">
+						<ul>
+							<li class="module centerFix">
+								<div class="module-icon">
+									<img width="100%" height="100%" alt="校历查询" src="images/yLife-xlcx.png">
+								</div>
+								<div class="module-title">
+									校历查询
+								</div>
+							</li>
+							<li class="module">
+								<div class="module-icon">
+									<img width="100%" height="100%" alt="奖助贷申请" src="images/yLife-jzdsq.png">
+								</div>
+								<div class="module-title">
+									奖助贷申请
+								</div>
+							</li>
+							<li class="module">
+								<div class="module-icon">
+									<img width="100%" height="100%" alt="水电费查询" src="images/yLife-sdfcj.png">
+								</div>
+								<div class="module-title">
+									水电费查询
+								</div>
+							</li>
+							<li class="module centerFix">
+								<div class="module-icon">
+									<img width="100%" height="100%" alt="一卡通充值" src="images/yLife-yktcz.png">
+								</div>
+								<div class="module-title">
+									一卡通充值
+								</div>
+							</li>
+							<li class="module">
+								<div class="module-icon">
+									<img width="100%" height="100%" alt="二手市场" src="images/yLife-essc.png">
+								</div>
+								<div class="module-title">
+									二手市场
+								</div>
+							</li>
+							<li class="module">
+								<div class="module-icon">
+									<img width="100%" height="100%" alt="失物招领" src="images/yLife-swzl.png">
+								</div>
+								<div class="module-title">
+									失物招领
+								</div>
+							</li>
+						</ul>
+					</div>
+				</section>
+			</div>
+		</main>
+	</div>
+
+
+	<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript">
+		// 点击登录或module弹出
+		function pop_LoginBox() {
+			var oBtn=document.getElementById("loginBtn");
+			var aModule=document.getElementsByClassName('module');
+			function pop_box() {
+				document.getElementById("mask").style.display="block";
+				document.getElementsByClassName("pop_LoginBox")[0].style.display="block";
+			}
+			for (var i = 0; i < aModule.length; i++) {
+				aModule[i].onclick=pop_box;
+			}
+			oBtn.onclick=pop_box;
+		}
+
+		// 点击关闭登录弹出框
+		function close_box() {
+			var oBtn=document.getElementsByClassName('closeBox')[0];
+			oBtn.onclick=function() {
+				document.getElementById("mask").style.display="none";
+				document.getElementsByClassName("pop_LoginBox")[0].style.display="none";
+			};
+		}
+
+		
+
+
+
+		// 点击导航条具体li
+		$(document).ready(function (){
+		   // each()是遍历函数
+		   $(".navUl li").each(function(index){
+			    $(this).click(function(){  
+			    	// 改变子li的样式
+				    $(".navUl li").removeClass("current");
+				    $(".navUl li").eq(index).addClass("current");
+
+				    // 切换不同的section
+				    $("section").hide();
+				    $("section").eq(index).addClass("animated fadeInRightBig").show();
+				    // $("section").eq(index).show();
+			    });
+		    });
+		 });
+
+		// 点击“我”按钮
+		$(".dropdown-toggle").click(function(){  
+		    $(".dropdown-menu").fadeIn();
+		   
+	    });
+		// 鼠标离开个人信息下拉菜单
+		$(".dropdown-menu").mouseleave(function() {
+		    $(".dropdown-menu").fadeOut(2000);
+		});
+
+
+		pop_LoginBox();
+		close_box();
+		
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+

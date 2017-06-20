@@ -1,0 +1,445 @@
+@import url(normalize.css);
+body{
+    font-family:"Microsoft YaHei","微软雅黑",sans-serif;
+    font-size:16px;
+    background:#77c1c2;
+}
+.container{
+    transform: scale(0.9,0.9);
+    width: 85%;
+    max-width: 1160px;
+/*     width: 1160px; */
+    display: table;
+    margin:0 auto;
+    background:#fff;
+/*      box-shadow:0px 0px 20px #147676; */
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius: 10px;
+}
+.content{
+    min-height: 570px;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    background:#ecf0f1;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius: 10px;
+}
+
+.header{
+    position: relative;
+}
+.main-header{
+/*     box-shadow: -2px 0 20px #000, 2px 0 20px #000; //右边阴影 */
+    box-shadow: 15px 0 10px -3px #222,
+            -15px 0 10px -3px #222;
+    width: 1160px;
+    height:65px;
+    background:#2e3641;
+}
+.logo{
+    float: left;
+    display: inline-block;
+    padding:13px 25px; 
+/*     vertical-align: middle; */
+}
+.logo img{
+/*     vertical-align: middle; */
+}
+.nav{
+    float:right;
+    padding-right: 25px;
+}
+.navUl{
+    /*     用户不选中文本，造成不必要的麻烦 */
+     -moz-user-select: none;
+      -ms-user-select: none;
+  -webkit-user-select: none; 
+    line-height: 1;
+    margin:0 ;
+/*     top:50%;
+    transform: translate(0,-50%); */
+    height: 65px;
+    float: left;
+    display: inline-block;
+}
+.nav li{
+/*     vertical-align: middle; */
+    cursor: pointer;
+    float: left;
+    list-style: none;
+    color:#fff;
+    padding:22px 10px;
+    position: relative;
+}
+.current{
+    background:#34495e;
+}
+.dot{
+    width: 10px;
+    height: 10px;
+    background:#fff;
+    position: absolute;
+    bottom:5px;
+    left: 30px;
+    border-radius: 10px;
+}
+.btn{
+     -moz-user-select: none;
+      -ms-user-select: none;
+  -webkit-user-select: none; 
+    border:none;
+    outline: none;
+    cursor:pointer;
+}
+.loginBtn{
+/*     float: left; */
+    top:50%;
+    transform: translate(0,50%);
+    display: inline-block;
+    color:#2e3641;
+    background: #fff;
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+    margin-left: 15px;
+/*     vertical-align: middle; */
+    
+}
+.connerL{ 
+    left: -65px;
+    top:-5px;
+    
+}
+.conner{
+    z-index: -1;
+    position: absolute;
+}
+.conner i{
+    color:#2e3641;
+    font-size: 100px;
+    line-height: 1;
+}
+.connerR{
+    right: -65px;
+    top:-5px;
+}
+
+
+.section{
+    margin: 2.7% 0;
+    width: 100%;
+/*     top:50%;
+    height: 50%;
+    transform: translate(-50%,-50%); */
+    overflow:hidden;
+    display: inline-block;
+}
+.yWork{
+    width: 1160px;
+}
+.module{
+    display: inline-block;
+    list-style: none;
+    width: 25%;
+    height: 164px;
+    background: #fff;
+    float: left;
+    margin: 1.7%;
+    
+    
+    border-radius: 10px;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding-top: 2%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.centerFix{
+    margin-left: 7.5%;
+}
+.module-icon{
+    display: inline-block;
+    width: 34%;
+    padding-bottom: 3%;
+}
+
+.content li:hover .module-icon{
+        animation: myfirst 0.6s;
+    -moz-animation: myfirst 0.6s;   
+    -webkit-animation: myfirst 0.6s;    
+    -o-animation: myfirst 0.6s;
+}
+
+@keyframes myfirst{
+    20% {transform: translate(0,-10px)}
+    40% {transform: translate(0,10px)}
+    60% {transform: translate(0,-6px)}
+    80% {transform: translate(0,6px)}
+    100% {transform: translate(0,0px)}
+}
+@-webkit-keyframes myfirst{
+    20% {transform: translate(0,-10px)}
+    40% {transform: translate(0,10px)}
+    60% {transform: translate(0,-6px)}
+    80% {transform: translate(0,6px)}
+    100% {transform: translate(0,0px)}
+}
+@-moz-keyframes myfirst{
+    20% {transform: translate(0,-10px)}
+    40% {transform: translate(0,10px)}
+    60% {transform: translate(0,-6px)}
+    80% {transform: translate(0,6px)}
+    100% {transform: translate(0,0px)}
+}
+
+
+
+.hearder-btn{
+    float: right;
+}
+
+.userInfoBtn{
+    display: inline-block;
+    position: relative;
+}
+
+
+.dropdown-toggle{
+    background:#69CBBA;
+    color:#fff;
+    display: inline-block;
+}
+.caret{
+    margin-left: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    color:#fff;
+    border-right: 3px solid transparent;
+    border-top: 5px solid #fff;
+    border-left: 3px solid transparent;
+    border-bottom:none;
+    width: 0;
+    height: 0;
+}
+.dropdown-menu{
+    left: -10px;
+    top:55px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #aaa;
+    position: absolute;
+    z-index: 99;
+    width: 114px;
+    height: 150px;
+    background: #fff;
+}
+.dropdown-menu ul{
+    margin:0;
+    padding:0;
+    list-style: none;
+    height: 150px;
+}
+.dropdown-menu li{
+    border-radius: 5px;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    padding: 15px 25px;
+    color:#000;
+}
+.dropdown-menu li:active{
+    background:#fff;
+}
+.dropdown-menu_item:hover{
+    background: #ddd;
+}
+
+
+
+
+
+
+
+
+
+/* 登弹出框 */
+.pop_LoginBox{ 
+    background: #f5f5f5;
+    width: 480px;
+    height: 320px;    
+    border-radius: 8px;
+    position: fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 999;
+    
+}
+.closeBox{
+    position: absolute;
+    top:8px;
+    right: 5px;
+}
+.closeBox img{
+    cursor: pointer;
+    width: 80%;
+}
+.LoginBox-title{
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 90px;
+    color: #fff;
+    text-align: center;
+    background: #77c1c2;
+    background: linear-gradient(-300deg,  rgb(46, 54, 65,0.9),  rgb(105, 193, 194,0.9));
+/*     background: linear-gradient(70deg, rgb(15, 13, 194,0.6), rgb(46, 54, 65,0.5)); */
+}
+
+.LoginBox-title h4{
+    padding:20px 0 10px 0;
+    text-align: center;
+    font-size: 24px;
+    margin:0;
+/*     line-height: 80px; */
+    line-height: 1;
+}
+.LoginBox-title p{
+    margin: 0;
+    font-size: 14px;
+}
+.LoginBox-form{
+/*     text-align: center; */
+/*     height: 300px; */
+    width: 53%;
+    margin:0 auto;
+    background: transparent;
+}
+.login-form-input{
+    background: #fff;
+    position: relative;
+    height:38px;
+    width: 253px;
+    border:1px solid #ddd;
+/*     box-shadow: 0px 0px 3px  #ddd; */
+    margin:15px 0;
+}
+
+.login-form-input img{
+    width: 16px;
+    padding:12px;
+}
+.login-form-input_line{
+    position: absolute;
+    left: 37px;
+    top:10px;
+    display: inline-block;
+    height: 20px;
+    width: 1px;
+    background: #ccc;
+}
+.login-form-input input{
+    font-size: 13px;
+    padding-left: 10px;
+    width: 200px;
+    vertical-align: top;
+    line-height: 38px;
+    background:transparent;
+    border:none;
+    outline: none;
+}
+.login-form-subBtn{  
+    background: #34495E;
+    border-radius: 5px;
+}
+.login-form-aboutPW{
+    margin-top: 8px;
+    color:#34495E;
+/*     font-weight: 500; */
+    font-size: 12px;
+    -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+
+   /*
+     Introduced in IE 10.
+     See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+   */
+   -ms-user-select: none;
+   user-select: none;
+}
+.login-form-aboutPW a{
+    text-decoration: none;
+    float: right;
+    color:#34495E;
+}
+
+.login-form-aboutPW_checked{
+    display: inline-block;
+    background:#1B9ADE;
+    width: 13px;
+    height: 13px;
+/*     line-height: 10px; */
+    vertical-align: bottom;
+    margin-right: 5px;
+}
+.login-form-aboutPW_disChecked{
+    display: inline-block;
+    border:1px solid #ccc;
+    background:#fff;
+    width: 13px;
+    height: 13px;
+/*     line-height: 10px; */
+    vertical-align: bottom;
+    margin-right: 5px;
+}
+
+.login-form-subBtn{
+    width:255px;
+    height: 40px;
+    border: none;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 我的CSS写得屎一样，哦也 */
+
+
+
+
+
+
